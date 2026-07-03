@@ -8,35 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    //変数を意識する
-    @State var crytext = "鳴き声"
-    
     var body: some View {
-        VStack {
-            //テキスト
-            Text(crytext)
-            HStack {
-                //ボタン
-                Button("🐈") {
-                    //cryTextに"ニャーン"を置き換える
-                    crytext = "ニャーン"
-                }
-                Button("🐕") {
-                    crytext = "わんわん"
-                }
-                Button("🐸") {
-                    crytext = "ケロケロ"
-                }
-                Button("🐘") {
-                    crytext = "パオーン"
-                }
+        ZStack {
+            Color.blue.frame(width: 200, height: 200)
+            Color.red.frame(width: 150, height: 150)
+            Color .yellow.frame(width: 100, height: 100)
             }
-            .buttonStyle(.bordered)
         }
-        .padding()
-        .font(.title)
     }
-}
 
 #Preview {
     ContentView()
